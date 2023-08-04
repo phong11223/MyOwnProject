@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace MyOwnProject.Models
     public class Resigter
     {
         [Required(ErrorMessage = "username must be entered")]
-        public string username { get; set; }
+        public string Hoten { get; set; }
         [Required(ErrorMessage = "email address must be entered")]
         public string Email { get; set; }
         [Required(ErrorMessage = "mobile number must be entered")]
