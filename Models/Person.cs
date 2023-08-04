@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,8 +10,8 @@ namespace MyOwnProject.Models
     {
         [Display(Name = "Ho ten")]
         [Required(ErrorMessage = "username must be entered")]
-        [RegularExpression(@"^[A-Za-z0-9]{3,10}$", ErrorMessage = "Characters are not allowed.")]
-        [StringLength(10, MinimumLength = 3, ErrorMessage = "username must be between 3 - 10 characters long")]
+        [RegularExpression(@"^[A-Za-z.-]+(\s*[A-Za-z.-]+)*$", ErrorMessage = "number are not allowed.")]
+        [StringLength(20, MinimumLength = 10, ErrorMessage = "username must be between 10 - 20 name long")]
         public string username { get; set; }
 
         [Display(Name = "Email")]
@@ -25,8 +25,8 @@ namespace MyOwnProject.Models
         public int mobile { get; set; }
 
         [Display(Name = "Ngay Sinh")]
-        [Required(ErrorMessage = "date must be entered")]
-        [DataType(DataType.DateTime, ErrorMessage = "Use proper date time")]
+        [Required(ErrorMessage = "date month and year must be entered")]
+        [DataType(DataType.Date, ErrorMessage = "Use proper date time")]
         public DateTime dob { get; set; }
 
         [Display(Name = "Thanh pho ")]
