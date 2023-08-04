@@ -11,7 +11,7 @@ namespace MyOwnProject.Models
         [Display(Name = "Ho ten")]
         [Required(ErrorMessage = "username must be entered")]
         [RegularExpression(@"^[A-Za-z.-]+(\s*[A-Za-z.-]+)*$", ErrorMessage = "number are not allowed.")]
-        [StringLength(20, MinimumLength = 10, ErrorMessage = "username must be between 10 - 20 name long")]
+        [StringLength(20, MinimumLength = 10, ErrorMessage = "username must be between 10 - 100 name long")]
         public string username { get; set; }
 
         [Display(Name = "Email")]
