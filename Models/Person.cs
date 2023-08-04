@@ -9,14 +9,16 @@ namespace MyOwnProject.Models
     public class Person
     {
         [Display(Name = "Ho ten")]
+        
+        [RegularExpression(@"^[A-Za-z\s]{1,1000}$", ErrorMessage = "text only")]
+        [DataType(DataType.Text)]
         [Required(ErrorMessage = "username must be entered")]
-        [RegularExpression(@"^[A-Za-z.-]+(\s*[A-Za-z.-]+)*$", ErrorMessage = "number are not allowed.")]
-        [StringLength(20, MinimumLength = 10, ErrorMessage = "username must be between 10 - 100 name long")]
-        public string username { get; set; }
+        public string Hoten { get; set; }
 
         [Display(Name = "Email")]
-        [Required(ErrorMessage = "email address must be entered")]
+       
         [DataType(DataType.EmailAddress, ErrorMessage = "Please input a valid email address")]
+        [Required(ErrorMessage = "email address must be entered")]
         public string email { get; set; }
 
         [Display(Name = "Dien thoai")]
